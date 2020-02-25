@@ -84,7 +84,10 @@ class View {
                                         <a class="nav-item nav-link" href="#">Contacts</a>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-light my-2 my-sm-0" type="button">Account</button>
+                                <form class="form-inline">
+                                    <a href="./roots/register.html"><button class="btn btn-outline-light my-2 my-sm-0" id="log_out" type="button">Log Out</button></a>
+                                    <button class="btn btn-outline-light my-2 my-sm-0" id="account" type="button">Account</button>
+                                </form>
                             </nav>`;
         root.append(navbar);
     }
@@ -106,12 +109,18 @@ class View {
                                                         <h4>${movie.year}</h4>
                                                         <p class="lead">Cast: <span class="text-inner">${movie.cast}</span></p>
                                                         <p class="lead">Genres: <span class="text-inner">${movie.genres}</span></p>
+                                                        <button class="btn btn-danger">Play</button>
+                                                        <button class="btn btn-outline-light" id="addToList">My List</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>`;
             root.append(mainMovieSection); 
         }, 300);
+    }
+
+    static moveToAccount() {
+        
     }
 
 }
@@ -135,14 +144,6 @@ class Movie {
         this.cast = cast;
         this.genres = genres;
         this.url = url;
-    }
-}
-
-class User {
-    constructor(username, email, password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
     }
 }
 
