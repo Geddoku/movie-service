@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(30, 30, 30);
 }
 
 a:hover {
@@ -78,4 +78,10 @@ a:hover {
     .card {
         margin: 5vh auto;
     }
+}
+
+.section-head {
+    margin-top: 3vh;
+    color: rgb(230, 230, 230);
+    text-align: center;
 }

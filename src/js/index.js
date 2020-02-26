@@ -1,4 +1,5 @@
-movies = [];
+let movies = [];
+let likedMovies = [];
 const root = document.getElementById('root');
 
 class Model {
@@ -43,6 +44,7 @@ class View {
         setTimeout(() => {
                 let movieCardsSection = document.createElement('div');
                 movieCardsSection.className = 'container-fluid';
+                movieCardsSection.innerHTML = `<h2 class="section-head">Latest Movie's</h2>`;
 
                 let rowMovieCardSection = document.createElement('div');
                 rowMovieCardSection.className = 'row';
@@ -86,7 +88,7 @@ class View {
                                 </div>
                                 <form class="form-inline">
                                     <a href="./roots/register.html"><button class="btn btn-outline-light my-2 my-sm-0" id="log_out" type="button">Log Out</button></a>
-                                    <button class="btn btn-outline-light my-2 my-sm-0" id="account" type="button">Account</button>
+                                    <a href="./roots/user-account.html"><button class="btn btn-outline-light my-2 my-sm-0" id="account" type="button">Account</button></a>
                                 </form>
                             </nav>`;
         root.append(navbar);
@@ -100,7 +102,7 @@ class View {
                                             <div class="row">
                                                 <div class="col-lg">
                                                     <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${movie.url}?controls=0" frameborder="0" allowfullscreen></iframe>
+                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${movie.url}?controls=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg main-movie--info">
@@ -116,6 +118,14 @@ class View {
                                             </div>
                                         </div>`;
             root.append(mainMovieSection); 
+
+            // Create event add movie to my list
+
+            document.getElementById('addToList').addEventListener('click', function(event) {
+                likedMovies = [movie.title, movie.year, movie.cast, movie.genres];
+                localStorage.setItem('liked movies', JSON.stringify(likedMovies));
+            });
+
         }, 300);
     }
 
