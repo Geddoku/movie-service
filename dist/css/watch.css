@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+.title {
+    color: rgb(230, 230, 230);
+    font-size: 30px;
+}
+
+.play-title {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.backButton  {
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.backButton a {
+    color: rgb(200, 200, 200);
+    font-size: 22px;
+    transition: .5s ease;
+}
+
+.back span:hover {
+    color: rgb(150, 150, 150);
+    transition: .5s ease;
+}
+
+.play-movie iframe {
+    max-height: 100vh;
+}

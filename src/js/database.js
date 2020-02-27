@@ -11,4 +11,18 @@ const itemsUrls =   [
                         '28dHbIR_NB4'  // "On the Basis of Sex"
                     ];
 
+const itemsWatchUrls = [
+                            'qYHGLvbYqqQ',
+                            'WVrx7hvbv8s',
+                            'Rp-V82kmp3E',
+                            'ahBs9dU1ZME',
+                            'neC3AQKdFPM',
+                            'gfcQZdOmUgU',
+                            'PEesgoBOgJA',
+                            'I1RRs7bnEA4',
+                            'iZHU4QjmxAQ',
+                            '28dHbIR_NB4'
+                       ];
+
 localStorage.setItem('data', JSON.stringify(itemsUrls));
+localStorage.setItem('watchData', JSON.stringify(itemsWatchUrls));

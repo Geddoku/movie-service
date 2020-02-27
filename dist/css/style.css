@@ -20,6 +20,15 @@ a:hover {
     min-height: 40vh;
 }
 
+.card-body a {
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+}
+
+.card-body a i:hover {
+    color: rgb(70, 70, 70);
+}
+
 .card-text {
     text-align: left;
     padding-left: 1vh;
@@ -84,4 +93,8 @@ a:hover {
     margin-top: 3vh;
     color: rgb(230, 230, 230);
     text-align: center;
+}
+
+#likeAction {
+    cursor: pointer;
 }

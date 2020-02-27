@@ -18,3 +18,10 @@ body {
 .my-list--section {
     margin-top: 5vh;
 }
+
+.card {
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    min-height: 40vh;
+    width: 27vh;
+}
